@@ -1,13 +1,1 @@
-ffmpeg -i "C:\Users\qiaof\OneDrive - UW\Wacom\Frame inspection\IMG_1401.mov" -vf "drawtext=fontfile=/WINDOWS/fonts/Arial.ttf: text='%{localtime}': x=(w-tw)/2: y=h-(2*lh): fontcolor=white: box=1: boxcolor=0x00000000@1" image%03d.png
-
-ffmpeg -i "C:\Users\qiaof\OneDrive - UW\Wacom\Frame inspection\IMG_1401.mov" -vf "drawtext=fontfile=/WINDOWS/fonts/Arial.ttf: text='%{pts\:hms}': x=(w-tw)/2: y=h-(2*lh): fontcolor=white: box=1: boxcolor=0x00000000@1" image%03d.png
-
-ffmpeg -i "C:\Users\qiaof\OneDrive - UW\Wacom\Frame inspection\IMG_1401.mov" -vf "drawtext=fontfile=/WINDOWS/fonts/Arial.ttf: timecode='00\:00\:00\:00': r=25: x=(w-tw)/2: y=h-(2*lh): fontcolor=white: box=1: boxcolor=0x00000000@1" image%03d.png
-
-ffmpeg -i "C:\Users\qiaof\Videos\Wacom Delay Test (Windows)\Bluetooth_TouchOff_Paint_2.mov" -vf "drawtext=fontfile=/WINDOWS/fonts/Arial.ttf: text='%{pts\:flt}': x=(w-tw)/2: y=h-(2*lh): fontcolor=white: box=1: boxcolor=0x00000000@1" "C:\Users\qiaof\Videos\Wacom Delay Test (Windows)\Bluetooth_TouchOff_Paint_2\image%03d.png"
-
-ffmpeg -ss 00:00:07.0 -i "C:\Users\qiaof\Videos\Delay Mac 2\IMG_1534.mov" -t 00:00:02.0 -vf "drawtext=fontfile=/WINDOWS/fonts/Arial.ttf: text='%{pts\:flt}': x=(w-tw)/2: y=h-(2*lh): fontcolor=white: box=1: boxcolor=0x00000000@1" "C:\Users\qiaof\Videos\Delay Mac 2\IMG_1534\image%03d.png"
-
-ffmpeg -ss 00:00:07.0 -i \"C:\\Users\\qiaof\\Videos\\Wacom Delay Test (Windows)\\Bluetooth_TouchOff_Paint_2.mov\" -t 00:00:01.0 -vf \"drawtext=fontfile=/WINDOWS/fonts/Arial.ttf: text=\'%{pts\:flt}\': x=(w-tw)/2: y=h-(2*lh): fontcolor=white: box=1: boxcolor=0x00000000@1\" \"C:\\Users\\qiaof\\Videos\\Wacom Delay Test (Windows)\\Bluetooth_TouchOff_Paint_2\\image%03d.png\"
-
-ffmpeg -ss 00:00:07 -i "C:\Users\qiaof\Videos\Delay Mac 2\IMG_1534.mov" -t 00:00:02 -vf "drawtext=fontfile=/WINDOWS/fonts/Arial.ttf: text='%{pts\:flt}': x=(w-tw)/2: y=h-(2*lh): fontcolor=white: box=1: boxcolor=0x00000000@1" "C:\Users\qiaof\Videos\Delay Mac 2\IMG_1534\image%03d.png"
+ffmpeg -ss HH:MM:SS -i input_url -t HH:MM:SS -vf "drawtext=fontfile=/WINDOWS/fonts/Arial.ttf: text='%{pts\:flt}': x=(w-tw)/2: y=h-(2*lh): fontcolor=white: box=1: boxcolor=0x00000000@1" output_url
